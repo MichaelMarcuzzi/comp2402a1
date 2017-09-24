@@ -17,6 +17,20 @@ public class Part1 {
 	 */
 	public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
 		// Your code goes here - see Part0 for an example
+		ArrayList s = new ArrayList(); // make ArrayList
+		
+		// Read each line and add to s
+		for (String line = r.readLine(); line != null; line = r.readLine()) {
+           		s.add(line);
+        	}
+		
+		// Reverse the order of the list
+		Collections.reverse(s);
+		
+		// Print the reversed list
+		for (String text : s) {
+            		w.println(text);
+        	}
 	}
 
 	/**
