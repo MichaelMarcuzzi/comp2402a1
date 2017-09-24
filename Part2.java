@@ -17,6 +17,37 @@ public class Part2 {
 	 */
 	public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
 		// Your code goes here - see Part0 for an example
+		ArrayList s = new ArrayList(); // make ArrayList for all lines
+		ArrayList e = new ArrayList(); // make ArrayList for even lines
+		ArrayList o = new ArrayList(); // make ArrayList for odd lines
+		
+		// Read each line and add to s
+		for (String line = r.readLine(); line != null; line = r.readLine()) {
+           		s.add(line);
+        	}
+		
+		// Seperate even and odd lines into different lists
+		for (String line : s) {
+			for(int x = 0; x <= s.size(); x++) {
+				if (x = 0 || x % 2 = 0) {
+					e.add(line);
+					s.remove(x);
+				} else {
+					o.add(line);
+					s.remove(x);
+				}
+			}
+		}
+		
+		// Print even lines
+		for (String text : e) {
+            		w.println(text);
+        	}
+		
+		// Print odd lines
+		for (String text : o) {
+            		w.println(text);
+        	}
 	}
 
 	/**
