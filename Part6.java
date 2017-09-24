@@ -17,6 +17,26 @@ public class Part6 {
 	 */
 	public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
 		// Your code goes here - see Part0 for an example
+		Set<String> s = new HashSet<>();
+		List<String> e = new ArrayList<String>();
+		
+		// Read each line and add to s
+		for (String line = r.readLine(); line != null; line = r.readLine()) {
+            		s.add(line);
+        	}
+		
+		for (String line : s) {
+			for (String x : e) {
+				if (e.isEmpty()) {
+					e.add(line);
+				}
+				if (line.length() >= x.length()) {
+					e.add(e.indexOf(x) + 1, line);
+				} else {
+					e.add(e.indexOf(x), line);
+				}
+			}
+		}
 	}
 
 	/**
