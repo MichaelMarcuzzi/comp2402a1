@@ -17,6 +17,20 @@ public class Part4 {
 	 */
 	public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
 		// Your code goes here - see Part0 for an example
+		// Your code goes here - see Part0 for an example
+		ArrayList<E> s = new ArrayList(); // make ArrayList
+		
+		for (String line = r.readLine(); line != null; line = r.readLine()) {
+            		s.add(line);
+       	 	}
+		
+		
+		for (String line : s) { // for each element of s..
+			if (line.length() % 2 = 1) { // ..if line is odd length..
+				w.println(s.get(s.size())); // print last element of s
+				s.remove(s.get(s.size())); // remove last element of s
+			}
+		}
 	}
 
 	/**
